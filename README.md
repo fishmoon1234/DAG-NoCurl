@@ -28,9 +28,13 @@ CHOICE = nocurl, corresponding to the linear experiments, NoCurl-2 case in the p
 
 CHOICE = notear, corresponding to the linear experiments, NOTEARS case in the paper
 
+LAMBDA1 = 10, corresponding to the parameter lambda_1 in the paper.
+
+LAMBDA2 = 1000, corresponding to the parameter lambda_2 in the paper.
+
 
 ```
-python main_efficient.py --data_variable_size=10 --graph_type="erdos-renyi" --repeat=100 --methods=<CHOICE> --h_tol=1e-8 --graph_degree=4 --alpha_A=1000 --data_type="synthetic"
+python main_efficient.py --data_variable_size=10 --graph_type="erdos-renyi" --repeat=100 --methods=<CHOICE> --h_tol=1e-8 --graph_degree=4 --lambda1=<LAMBDA1> --lambda2=<LAMBDA2> --data_type="synthetic"
 
 ```
 

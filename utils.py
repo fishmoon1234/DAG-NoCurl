@@ -383,7 +383,7 @@ def print_to_file(args,
                   '_' + args.data_type + '_' + str(args.data_sample_size) + '_' +\
                   str(args.graph_type) + '_' + str(args.graph_sem_type) + \
                   '_' + str(args.graph_degree) + '_hTol_' + str(args.h_tol) + \
-                  '_alpha_' + str(args.alpha_A)
+                  '_lambda_' + str(args.lambda1) + '_' + str(args.lambda2)
 
     output_file_name = os.path.join('results', method_info)
 

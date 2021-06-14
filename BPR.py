@@ -25,7 +25,8 @@ class BPR:
         self.args = args
         self.rho_max = args.rho_A_max # augmented Langagragian coefficent
         self.h_tol = args.h_tol
-        self.alpha = args.alpha_A
+        self.lambda1 = args.lambda1
+        self.lambda2 = args.lambda2
         self.train_epochs = args.train_epochs
         self.threshold_A = args.graph_threshold
         self.loss_type = 'l2'
@@ -114,7 +115,7 @@ class BPR:
         return A, [-1], [], [lossA[0]]
 
 
-    def fit_aug_lagr_AL2proj(self, X, hTol, prealpha, threshold):
+    def fit_aug_lagr_AL2proj(self, X, hTol, lambda1, lambda2, threshold):
 
         def relu(x, derivative=False, alpha=0.1):
             rel = x * (x > 0)
@@ -286,7 +287,7 @@ class BPR:
         bnds[totalcount + d - 1] = (0, 0)
         bndsw = [(None, None) for i in range(totalcount)] #bounds for w in g(phi)
         rho = 0.0
-        alpha = 10.0
+        alpha = lambda1
         prew = np.zeros(d * d)
         prebnds = [(0, 0) if i == j else (None, None) for i in range(d) for j in range(d)]
 
@@ -294,7 +295,7 @@ class BPR:
         prew = np.copy(presol.x)
 
         rho = 0.0
-        alpha = prealpha
+        alpha = lambda2
 
         presol = sopt.minimize(_prefunc, prew, method='L-BFGS-B', jac=_pregrad, bounds=prebnds, options={'ftol': hTol})
         prew = np.copy(presol.x)
@@ -345,7 +346,8 @@ class BPR:
     def fit_all_L2proj(self, X):
         Wstar, lossW = self.fit_aug_lagr_AL2proj(X,
                                     hTol=self.h_tol,
-                                    prealpha=self.alpha,
+                                    lambda1=self.lambda1,
+                                    lambda2=self.lambda2,
                                     threshold=self.threshold_A)
 
         # compare how sparse it is

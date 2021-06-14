@@ -61,8 +61,10 @@ def get_args():
 
     parser.add_argument('--graph_threshold', type=  float, default = 0.3,  # 0.3 is good, 0.2 is error prune
                         help = 'threshold for learned adjacency matrix binarization')
-    parser.add_argument('--alpha_A',  type = float, default= 1000., #corresponding to alpha
-                        help='coefficient for DAG constraint h(A).')
+    parser.add_argument('--lambda1',  type = float, default= 1000., #corresponding to lambda2
+                        help='coefficient for the first penalty parameter for h(A) in step 1.')
+    parser.add_argument('--lambda2',  type = float, default= 1000., #corresponding to lambda2
+                        help='coefficient for the second penalty parameter for h(A) in step 1.')
     parser.add_argument('--rho_A_max', type=float, default=1e+16,  # corresponding to rho, needs to  be >> lambda
                         help='coefficient for notears.')
     parser.add_argument('--h_tol', type=float, default = 1e-8,
