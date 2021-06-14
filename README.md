@@ -18,7 +18,11 @@ Synthetic linear data experiments. Please download the dataset at
 
 https://drive.google.com/file/d/1O52SlAHPRw_iFW_sAfm_vR3oMnoEb8am/view?usp=sharing
 
-### Synthetic Experiments
+For the synthetic nonlinear data experiments, codes will be shared at
+
+DAG-GNN https://github.com/fishmoon1234/DAG-GNN
+
+### Synthetic linear data Experiments
 
 CHOICE = nocurl, corresponding to the linear experiments, NoCurl-2 case in the paper
 
