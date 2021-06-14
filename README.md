@@ -15,11 +15,13 @@ PyTorch >1.0
 ## How to Run 
 
 Synthetic linear data experiments. Please download the dataset at
+
 https://drive.google.com/file/d/1O52SlAHPRw_iFW_sAfm_vR3oMnoEb8am/view?usp=sharing
 
 ### Synthetic Experiments
 
 CHOICE = nocurl, corresponding to the linear experiments, NoCurl-2 case in the paper
+
 CHOICE = notear, corresponding to the linear experiments, NOTEARS case in the paper
 
 
