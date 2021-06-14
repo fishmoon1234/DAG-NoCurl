@@ -15,7 +15,7 @@ PyTorch >1.0
 ## How to Run 
 
 Synthetic linear data experiments. Please download the dataset at
-https://drive.google.com/file/d/1O52SlAHPRw\_iFW\_sAfm\_vR3oMnoEb8am/view?usp=sharing
+https://drive.google.com/file/d/1O52SlAHPRw_iFW_sAfm_vR3oMnoEb8am/view?usp=sharing
 
 ### Synthetic Experiments
 
@@ -47,5 +47,5 @@ If you make use of this code in your own work, please cite our paper:
 Our work and code benefit from two existing works, which we are very grateful.
 
 * DAG NOTEAR https://github.com/xunzheng/notears
-* DAG NOFEAR https://github.com/skypea/DAG\_No\_Fear
+* DAG NOFEAR https://github.com/skypea/DAG_No_Fear
 
